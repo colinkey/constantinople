@@ -1,0 +1,17 @@
+{% if CODEPEN %}
+<article class="post">
+    <div class="inner">
+        <header class="post-header">
+            <h2 class="post-title">Recent Pens</h2>
+            <span class="post-meta"><a href="https://www.codepen.io/{{CODEPEN}}">See all pens @ codepen.io/{{ CODEPEN }}</a></span>
+        <header>
+        {% for pen in PEN_SHOWCASE %}
+        <div class="pen-container">
+            <div class="pen">
+                {{ pen.embed }}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</article>
+{% endif %}
